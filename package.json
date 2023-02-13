@@ -1,0 +1,20 @@
+{
+  "name": "project-tech",
+  "version": "1.0.0",
+  "description": "Lars van Veldhuizen - Blok 3 - Leerjaar 2 Hallo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsvv99/Project-Tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larsvv99/Project-Tech/issues"
+  },
+  "homepage": "https://github.com/larsvv99/Project-Tech#readme"
+}
