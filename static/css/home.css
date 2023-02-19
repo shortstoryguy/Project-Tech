@@ -33,7 +33,7 @@ section ul li{
     background-size: cover;
     background-position: center;
     max-width: 25em;
-    text-shadow:0 0 10px var(--huisstijlkleur-grijs);
+    text-shadow: 3px 3px 3px var(--huisstijlkleur-grijs);
 }
 
 section ul li:hover{
