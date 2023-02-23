@@ -4,9 +4,13 @@ const PORT = process.env.PORT || 1337
 app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`))
 
 app.use(express.static('static'))
+app.use(express.static('views'))
+
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
 
 function onHome(req, res){
-	res.send(`index.hbs`) 
+	res.render(`index.hbs`) 
 }
 
 app.get('/filter', (req, res) => {
