@@ -6,9 +6,15 @@ app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`))
 
 app.use(express.static('static'))
 app.use(express.static('views'))
+<<<<<<< HEAD
 app.set('view engine', 'hbs')
 app.set('view engine', 'html')
 app.engine('html', require('hbs').__express)
+=======
+
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
+>>>>>>> parent of ed2d45b (HBS werkend maken 1.1)
 
 function onHome(req, res){
 	res.render(`index.hbs`) 
