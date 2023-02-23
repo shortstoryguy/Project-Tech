@@ -5,7 +5,7 @@ app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`))
 
 app.use(express.static('static'))
 app.use(express.static('views'))
-
+app.set('view engine', 'hbs');
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
