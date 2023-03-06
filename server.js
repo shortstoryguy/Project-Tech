@@ -1,32 +1,28 @@
-const express = require(`express`)
-const app = express()
-const PORT = process.env.PORT || 1337
-app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`))
+const express = require(`express`);
+const app = express();
+const { engine } = require(`express-handlebars`);
+const PORT = 1337;
+app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`));
 
-app.use(express.static('static'))
-app.use(express.static('views'))
-
-app.set('view engine', 'hbs')
-app.set('view engine', 'html')
-app.engine('html', require('hbs').__express)
+app.use(express.static(`static`));
+app.engine(`handlebars`, engine());
+app.set(`view engine`, `handlebars`);
+app.set(`views', './views`);
 
 
-app.set('view engine', 'html');
-app.engine('html', require('hbs').__express);
 
-function onHome(req, res){
-	res.render(`index.hbs`) 
+function onHome(req, res) {
+	res.render(`test.hbs`);
 }
 
-app.get('/filter', (req, res) => {
-	res.send('Filterpagina')
-	res.send(`/static/styles/style.css`)
-})
+app.get(`/`, onHome());
 
-app.get('/overons', (req, res) => {
-	res.send('Overons')
-})
+app.get(`/filter`, (req, res) => {
+	res.send(`/styles/style.css`);
+});
 
-app.get('/', (req, res) => {
-	res.send('Hello World!')
-})
+app.get(`/overons`, (req, res) => {
+	res.send(`Overons`);
+});
+
+
