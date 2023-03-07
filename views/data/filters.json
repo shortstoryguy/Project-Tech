@@ -1,0 +1,19 @@
+{
+    "landen": [
+        {
+            "id": 0,
+            "imgurl": "../../static/images/samenkoken.jpg",
+            "land": "Italiaans"
+        },
+        {
+            "id": 1,
+            "imgurl": "../../static/images/samenkoken.jpg",
+            "land": "Grieks"
+        },
+        {
+            "id": 2,
+            "imgurl": "../../static/images/samenkoken.jpg",
+            "land": "Koreaans"
+        }
+    ]
+}
