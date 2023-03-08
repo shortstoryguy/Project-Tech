@@ -6,7 +6,6 @@ const filterdata = require(`./views/data/filters.json`);
 
 //connectie
 const PORT = 4000;
-app.get(`/`, onHome).listen(PORT, console.log(`Running on port: ${PORT}`));
 
 //error
 // app.use((req, res, next) => {
@@ -44,5 +43,6 @@ app.get(`/overons`, (req, res) => {
 	res.send(`Overons`);
 });
 
+app.listen(PORT, console.log(`Running on port: ${PORT}`));
 
 
